@@ -1,3 +1,16 @@
+h1 {
+    color: var(--bs-white);
+    margin-top: 36px;
+    font-family: Sacramento, serif;
+    text-shadow: -3px 1px 3px #d1c2ed;
+}
+
+h6 {
+    text-align: center;
+    color: rgba(25,90,156,0.7);
+    font-family: 'Open Sans', sans-serif;
+}
+
 .dropArea {
     border-radius: 25px;
     border-style: dashed;
@@ -13,4 +26,37 @@
 
 .dropArea.active {
     border-style: solid;
+}
+
+.cloud {
+    width: 200px;
+    font-size: 38px;
+    text-align: center;
+    height: 65px;
+    color: #8bbef1;
+}
+
+.button {
+    text-align: center;
+    margin-left: 0px;
+    background: rgb(232,241,247);
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    color: rgb(150,188,219);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#resultBox {
+    height: 400px;
+    background: rgba(255,255,255,0.64);
+    margin-top: 20px;
+    margin-left: 0px;
+    border-radius: 25px;
+}
+
+#result {
+    height: 100%;
 }
