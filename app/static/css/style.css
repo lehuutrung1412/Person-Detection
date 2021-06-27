@@ -1,0 +1,16 @@
+.dropArea {
+    border-radius: 25px;
+    border-style: dashed;
+    border-color: rgb(128,184,241);
+    background: rgba(255,255,255,0.64);
+    height: 100px;
+    margin-top: 36px;
+    color: rgb(33, 37, 41);
+    box-shadow: 0px 0px 11px 1px rgb(99,148,198);
+    margin-left: 0px;
+    text-align: center;
+}
+
+.dropArea.active {
+    border-style: solid;
+}
