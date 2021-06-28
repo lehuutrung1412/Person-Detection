@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 
-<body style="background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);">
+<body style="background-color: #e9f3fd;">
     <div class="container" style="width: 730px;">
         <header>
             <h1 class="text-center" >Human Detection Application</h1>
@@ -22,17 +22,18 @@
         </header>
         <main class="text-center align-items-center">
             <div class="dropArea d-lg-flex justify-content-lg-center align-items-lg-center">
-                <i class="cloud fas fa-cloud-upload-alt d-block d-lg-flex justify-content-lg-center align-items-lg-center" data-bss-hover-animate="bounce"></i>
-                <input type="file" hidden>
+                <div class="dropArea-child">
+                    <i class="cloud fas fa-cloud-upload-alt d-block d-lg-flex justify-content-lg-center align-items-lg-center" data-bss-hover-animate="bounce"></i>
+                    <span id="detail">Upload your image</span>
+                    <input type="file" hidden>
+                </div>
             </div>
-            <div class="text-center d-lg-flex justify-content-lg-center align-items-lg-center" style="margin-top: 20px;">
-                <button class="button btn text-center link-primary d-lg-flex justify-content-center align-items-center align-content-center" data-bss-hover-animate="rubberBand" type="button" style="">Detect</button></div>
             <div id="resultBox" class="d-none">
                 <img id="result"/>
             </div>
         </main>
         <footer class="footer-basic" style="background: rgba(255,255,255,0);color: var(--bs-white);margin-bottom: 345px;">
-            <p class="copyright" style="color: rgba(255,255,255,0.64);font-family: 'Open Sans', sans-serif;font-weight: bold;text-align: center;">Code by @lehuutrung1412</p>
+            <p class="copyright">Code by <a href="https://github.com/lehuutrung1412">@lehuutrung1412</a></p>
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
