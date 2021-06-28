@@ -1,6 +1,9 @@
 const dropArea = document.querySelector('.dropArea'),
 input = dropArea.querySelector('input');
 const imgResult = document.querySelector('#result');
+const dropAreaChild = document.querySelector('.dropArea-child');
+const detail = document.querySelector('#detail');
+let resultBox = document.querySelector("#resultBox");
 let file;
 
 dropArea.onclick = ()=>{
@@ -14,11 +17,11 @@ input.addEventListener("change", function (){
 
 dropArea.addEventListener("dragover", (event) => {
     event.preventDefault();
-    dropArea.classList.add("active");
+    dropAreaChild.classList.add("active");
 });
 
 dropArea.addEventListener("dragleave", () => {
-    dropArea.classList.remove("active");
+    dropAreaChild.classList.remove("active");
 });
 
 dropArea.addEventListener("drop", (event) => {
@@ -28,6 +31,8 @@ dropArea.addEventListener("drop", (event) => {
 });
 
 function upload(){
+    resultBox.classList.add("d-none");
+    detail.innerHTML = 'Detecting . . .';
     let fileType = file.type;
     let validExt = ["image/jpeg", "image/jpg", "image/png"];
     if (validExt.includes(fileType)){
@@ -51,6 +56,9 @@ function upload(){
                     let bytestring = response['status'];
                     let image = 'data:image/jpeg;base64,' + bytestring.split('\'')[1];
                     imgResult.src = image;
+                    resultBox.classList.remove("d-none");
+                    dropAreaChild.classList.remove("active");
+                    detail.innerHTML = 'Upload your image';
                 }
                 else{
                     console.log('No response');
@@ -61,12 +69,11 @@ function upload(){
                 console.log(error);
             }
         });
-        let resultBox = document.querySelector("#resultBox");
-        resultBox.classList.remove("d-none");
-        dropArea.classList.remove("active");
     }
     else{
         alert("Vui lòng tải lên file ảnh");
-        dropArea.classList.remove("active");
+        dropAreaChild.classList.remove("active");
+        resultBox.classList.remove("d-none");
+        detail.innerHTML = 'Upload your image';
     }
 }
