@@ -6,7 +6,7 @@ from skimage.feature import hog
 from imutils.object_detection import non_max_suppression
 
 
-def detect(image, model='../models/model.dat', img_w=350, size=(64, 128), step_size=(9, 9), downscale=2):
+def detect(image, model='model.dat', img_w=350, size=(64, 128), step_size=(9, 9), downscale=2):
     # If this is a path of image
     if type(image) == str:
         image = cv2.imread(image)
@@ -14,7 +14,7 @@ def detect(image, model='../models/model.dat', img_w=350, size=(64, 128), step_s
     # List to store the detections
     detections = []
     # The current scale of the image
-    model = joblib.load(model)
+    model = joblib.load('../models/' + model)
     scale = 0
     for im_scaled in pyramid(image, downscale=downscale, min_size=size):
         for (x, y, window) in sliding_window(im_scaled, step_size, size):
