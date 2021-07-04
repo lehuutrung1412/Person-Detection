@@ -3,7 +3,8 @@ input = dropArea.querySelector('input');
 const imgResult = document.querySelector('#result');
 const dropAreaChild = document.querySelector('.dropArea-child');
 const detail = document.querySelector('#detail');
-let resultBox = document.querySelector("#resultBox");
+const resultBox = document.querySelector("#resultBox");
+const cloud = document.querySelector(".cloud");
 let file;
 
 dropArea.onclick = ()=>{
@@ -33,6 +34,7 @@ dropArea.addEventListener("drop", (event) => {
 function upload(){
     resultBox.classList.add("d-none");
     detail.innerHTML = 'Detecting . . .';
+    cloud.classList.remove("animated", "infinite", "bounce");
     let fileType = file.type;
     let validExt = ["image/jpeg", "image/jpg", "image/png"];
     if (validExt.includes(fileType)){
@@ -58,6 +60,7 @@ function upload(){
                     imgResult.src = image;
                     resultBox.classList.remove("d-none");
                     dropAreaChild.classList.remove("active");
+                    cloud.classList.add("animated", "infinite", "bounce");
                     detail.innerHTML = 'Upload your image';
                 }
                 else{
@@ -74,6 +77,7 @@ function upload(){
         alert("Vui lòng tải lên file ảnh");
         dropAreaChild.classList.remove("active");
         resultBox.classList.remove("d-none");
+        cloud.classList.add("animated", "infinite", "bounce");
         detail.innerHTML = 'Upload your image';
     }
 }
