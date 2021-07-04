@@ -22,6 +22,7 @@ h6 {
     margin-top: 48px;
     box-shadow: 0 25px 25px 5px rgba(141,179,215,0.8);
     text-align: center;
+    padding: 20px;
 }
 
 /*.dropArea.active {*/
@@ -31,9 +32,11 @@ h6 {
 .dropArea-child {
     border-style: dashed;
     border-radius: 20px;
-    padding: 20px 222px;
+    padding: 40px 20px;
     border-color: #acb3be;
     border-width: medium;
+    height: 140px;
+    width: 660px;
 }
 
 .dropArea-child.active {
@@ -41,10 +44,8 @@ h6 {
 }
 
 .cloud {
-    width: 200px;
     font-size: 38px;
     text-align: center;
-    height: 65px;
     color: #8bbef1;
 }
 
@@ -52,6 +53,7 @@ h6 {
     font-weight: 800;
     font-size: 20px;
     color: #78839a;
+    display: block;
 }
 
 .button {
@@ -69,15 +71,11 @@ h6 {
 }
 
 #resultBox {
-    height: 400px;
+    height: 100%;
     background: rgba(255,255,255,0.9);
     margin-top: 80px;
     border-radius: 30px;
     box-shadow: 0 25px 25px 5px rgba(141,179,215,0.8);
-}
-
-#result {
-    height: 100%;
 }
 
 .copyright {
