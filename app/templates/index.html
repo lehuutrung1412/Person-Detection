@@ -4,11 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Person Detection Application</title>
+    <title>Human Detection Application</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento&amp;display=swap">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/Footer-Basic.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -18,12 +16,12 @@
     <div class="container" style="width: 730px;">
         <header>
             <h1 class="text-center" >Human Detection Application</h1>
-            <h6 >Based on HOG and SVM</h6>
+            <h6 >Based on {{ name_model }}</h6>
         </header>
-        <main class="text-center align-items-center">
-            <div class="dropArea d-lg-flex justify-content-lg-center align-items-lg-center">
+        <main class="text-center">
+            <div class="dropArea">
                 <div class="dropArea-child">
-                    <i class="cloud fas fa-cloud-upload-alt d-block d-lg-flex justify-content-lg-center align-items-lg-center" data-bss-hover-animate="bounce"></i>
+                    <i class="cloud fas fa-cloud-upload-alt animated infinite bounce"></i>
                     <span id="detail">Upload your image</span>
                     <input type="file" hidden>
                 </div>
@@ -32,13 +30,13 @@
                 <img id="result"/>
             </div>
         </main>
-        <footer class="footer-basic" style="background: rgba(255,255,255,0);color: var(--bs-white);margin-bottom: 345px;">
+        <footer>
             <p class="copyright">Code by <a href="https://github.com/lehuutrung1412">@lehuutrung1412</a></p>
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='js/bs-init.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animation.js') }}"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
