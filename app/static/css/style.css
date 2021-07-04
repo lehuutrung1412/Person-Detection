@@ -83,5 +83,12 @@ h6 {
 .copyright {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+    font-size: 14px;
     text-align: center;
+    margin-top: 45px;
+    color: #78839a;
+}
+
+.copyright a {
+    color: rgba(25,90,156,0.7);
 }
