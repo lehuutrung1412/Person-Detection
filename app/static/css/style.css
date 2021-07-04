@@ -22,7 +22,7 @@ h6 {
     margin-top: 48px;
     box-shadow: 0 25px 25px 5px rgba(141,179,215,0.8);
     text-align: center;
-    padding: 20px;
+    padding: 3%;
 }
 
 /*.dropArea.active {*/
@@ -35,8 +35,8 @@ h6 {
     padding: 40px 20px;
     border-color: #acb3be;
     border-width: medium;
-    height: 140px;
-    width: 660px;
+    height: 100%;
+    width: 100%;
 }
 
 .dropArea-child.active {
@@ -76,6 +76,10 @@ h6 {
     margin-top: 80px;
     border-radius: 30px;
     box-shadow: 0 25px 25px 5px rgba(141,179,215,0.8);
+}
+
+#result {
+    width: 90%;
 }
 
 .copyright {
