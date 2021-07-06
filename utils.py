@@ -1,4 +1,16 @@
 import cv2
+import base64
+from PIL import Image
+import io
+
+
+def convert_img_base64(img):
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    img = Image.fromarray(img.astype("uint8"))
+    raw_bytes = io.BytesIO()
+    img.save(raw_bytes, "JPEG")
+    raw_bytes.seek(0)
+    return base64.b64encode(raw_bytes.read())
 
 
 def sliding_window(image, step_size, window_size):
