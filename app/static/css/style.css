@@ -78,6 +78,10 @@ h6 {
     box-shadow: 0 25px 25px 5px rgba(141,179,215,0.8);
 }
 
+.resultBox h6 {
+    font-weight: bold;
+}
+
 .result {
     width: 90%;
 }
