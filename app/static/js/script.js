@@ -1,9 +1,9 @@
 const dropArea = document.querySelector('.dropArea'),
 input = dropArea.querySelector('input');
-const imgResult = document.querySelector('#result');
+const imgResult = document.querySelectorAll('.result');
 const dropAreaChild = document.querySelector('.dropArea-child');
 const detail = document.querySelector('#detail');
-const resultBox = document.querySelector("#resultBox");
+const resultBox = document.querySelectorAll(".resultBox");
 const cloud = document.querySelector(".cloud");
 let file;
 
@@ -32,7 +32,8 @@ dropArea.addEventListener("drop", (event) => {
 });
 
 function upload(){
-    resultBox.classList.add("d-none");
+    // resultBox.classList.add("d-none");
+    resultBox.forEach(rb => {rb.classList.add("d-none");});
     detail.innerHTML = 'Detecting . . .';
     cloud.classList.remove("animated", "infinite", "bounce");
     let fileType = file.type;
@@ -55,10 +56,13 @@ function upload(){
             success: function (response){
                 if (response){
                     // console.log(response);
-                    let bytestring = response['status'];
-                    let image = 'data:image/jpeg;base64,' + bytestring.split('\'')[1];
-                    imgResult.src = image;
-                    resultBox.classList.remove("d-none");
+                    let bytestring = response['img_hog'];
+                    let image_hog = 'data:image/jpeg;base64,' + bytestring.split('\'')[1];
+                    let bytestring_ = response['img_yolo'];
+                    let image_yolo = 'data:image/jpeg;base64,' + bytestring_.split('\'')[1];
+                    imgResult[0].src = image_hog;
+                    imgResult[1].src = image_yolo;
+                    resultBox.forEach(rb => {rb.classList.remove("d-none");});
                     dropAreaChild.classList.remove("active");
                     cloud.classList.add("animated", "infinite", "bounce");
                     detail.innerHTML = 'Upload your image';
@@ -76,7 +80,7 @@ function upload(){
     else{
         alert("Vui lòng tải lên file ảnh");
         dropAreaChild.classList.remove("active");
-        resultBox.classList.remove("d-none");
+        resultBox.forEach(rb => {rb.classList.remove("d-none");});
         cloud.classList.add("animated", "infinite", "bounce");
         detail.innerHTML = 'Upload your image';
     }

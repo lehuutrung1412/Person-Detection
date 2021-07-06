@@ -70,7 +70,7 @@ h6 {
     display: none;
 }
 
-#resultBox {
+.resultBox {
     height: 100%;
     background: rgba(255,255,255,0.9);
     margin-top: 80px;
@@ -78,7 +78,7 @@ h6 {
     box-shadow: 0 25px 25px 5px rgba(141,179,215,0.8);
 }
 
-#result {
+.result {
     width: 90%;
 }
 
