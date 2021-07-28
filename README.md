@@ -47,3 +47,8 @@ Just drag and drop or click in upload image area to select an image. After that,
 
 * If my project is useful for you, please mark ⭐ it on Github and share it with your friends. Thank you!
 * Have any questions? Open an issue on this project.
+
+## Reference
+
+* Training HOG with SVM: [@RashadGarayev](https://github.com/RashadGarayev/PersonDetection)
+* Training Yolo: [@pjreddie](https://github.com/pjreddie/darknet)
