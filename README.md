@@ -29,6 +29,13 @@ In addition, I also built a detection using Yolov4 darknet53.
    
     Just build and detect model following the guide. In this app, I loaded yolo architecture using cv2.dnn darknet.
 
+## How to run?
+
+To start server test, you can run:
+```
+python app/app.py
+```
+
 ## How to build?
 
 Update soon...
