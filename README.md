@@ -36,10 +36,6 @@ To start server test, you can run:
 python app/app.py
 ```
 
-## How to build?
-
-Update soon...
-
 ## How to use?
 
 Just drag and drop or click in upload image area to select an image. After that, the person detected image will be returned.
